@@ -1,0 +1,5 @@
+.idea
+target
+certificates
+src/main/resources/localhost.keystore
+src/main/resources/localhost.truststore

@@ -1,0 +1,13 @@
+server:
+  port: 18080
+  ssl:
+    enabled: true
+    client-auth: need
+    key-store: classpath:localhost.keystore
+    key-store-password: changeit
+    key-store-type: jks
+    key-alias: localhost
+    key-password: changeit
+    trust-store: classpath:localhost.truststore
+    trust-store-password: changeit
+    trust-store-type: jks
