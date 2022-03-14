@@ -33,7 +33,7 @@ or
 
 ```
 curl -v \
-    --cacert certificates/ca.crt \
+    --cacert certificates/intermediate-ca.crt \
     https://localhost:18080/hello
 ```
 
@@ -41,7 +41,7 @@ The request gets rejected due to a missing client certificate.
 
 ```
 curl -v \
-    --cacert certificates/ca.crt \
+    --cacert certificates/intermediate-ca.crt \
     --cert certificates/client.crt \
     --key certificates/client.key \
     https://localhost:18080/hello
@@ -52,7 +52,7 @@ shows `Authorising user client`.
 
 ```
 curl -v \
-    --cacert certificates/ca.crt \
+    --cacert certificates/intermediate-ca.crt \
     --cert certificates/unregistered-client.crt \
     --key certificates/unregistered-client.key \
     https://localhost:18080/hello
@@ -63,7 +63,7 @@ shows `Authorising user client-2`.
 
 ```
 curl -v \
-    --cacert certificates/ca.crt \
+    --cacert certificates/intermediate-ca.crt \
     --cert certificates/malicious-client.crt \
     --key certificates/malicious-client.key \
     https://localhost:18080/hello
